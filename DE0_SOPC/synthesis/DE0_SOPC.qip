@@ -1,0 +1,27 @@
+set_global_assignment -entity "DE0_SOPC" -library "DE0_SOPC" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "DE0_SOPC" -library "DE0_SOPC" -name IP_TOOL_VERSION "13.1"
+set_global_assignment -entity "DE0_SOPC" -library "DE0_SOPC" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "DE0_SOPC" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../DE0_SOPC.sopcinfo"]
+set_global_assignment -entity "DE0_SOPC" -library "DE0_SOPC" -name SLD_INFO "QSYS_NAME DE0_SOPC HAS_SOPCINFO 1 GENERATION_ID 1607703495"
+set_global_assignment -library "DE0_SOPC" -name MISC_FILE [file join $::quartus(qip_path) "../../DE0_SOPC.cmp"]
+set_global_assignment -library "DE0_SOPC" -name SLD_FILE [file join $::quartus(qip_path) "DE0_SOPC.debuginfo"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "DE0_SOPC" -name MISC_FILE [file join $::quartus(qip_path) "../../DE0_SOPC.qsys"]
+
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "DE0_SOPC.v"]
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "DE0_SOPC" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE0_SOPC_pll.v"]
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE0_SOPC_sdram.v"]
+set_global_assignment -library "DE0_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DE0_SOPC_sdram_test_component.v"]
+
+set_global_assignment -entity "altera_reset_controller" -library "DE0_SOPC" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "DE0_SOPC" -name IP_TOOL_VERSION "13.1"
+set_global_assignment -entity "altera_reset_controller" -library "DE0_SOPC" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "DE0_SOPC_pll" -library "DE0_SOPC" -name IP_TOOL_NAME "altpll"
+set_global_assignment -entity "DE0_SOPC_pll" -library "DE0_SOPC" -name IP_TOOL_VERSION "13.1"
+set_global_assignment -entity "DE0_SOPC_pll" -library "DE0_SOPC" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "DE0_SOPC_sdram" -library "DE0_SOPC" -name IP_TOOL_NAME "altera_avalon_new_sdram_controller"
+set_global_assignment -entity "DE0_SOPC_sdram" -library "DE0_SOPC" -name IP_TOOL_VERSION "13.1"
+set_global_assignment -entity "DE0_SOPC_sdram" -library "DE0_SOPC" -name IP_TOOL_ENV "Qsys"
